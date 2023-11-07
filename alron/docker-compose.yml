@@ -1,0 +1,99 @@
+version: '3'
+services:
+
+  alron-nginx:
+    image: 150128700443.dkr.ecr.us-east-1.amazonaws.com/autoagents:nginx-master
+    container_name: alron-nginx
+    restart: always
+    expose:
+      - "${NGINX_PORT}"
+    ports:
+      - "${NGINX_PORT}:${NGINX_PORT}"
+    depends_on:
+      - alron-backend
+    # volumes:
+      # - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      # - ./nginx:/etc/nginx
+    networks:
+      - alron-net
+
+  alron-backend:
+    image: 150128700443.dkr.ecr.us-east-1.amazonaws.com/autoagents:alron-master
+    container_name: alron-backend
+    hostname: ${ALRON_HOST}
+    restart: always
+    expose:
+      - "${ALRON_PORT}"
+    ports:
+      - "${ALRON_PORT}:${ALRON_PORT}"
+    links:
+      - alron-mysql
+      - alron-redis
+    depends_on:
+      - alron-mysql
+      - alron-redis
+    working_dir: /alron
+    environment:
+      - server.port=${ALRON_PORT}
+      - spring.profiles.active=compose
+      - spring.datasource.url=jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT}/alron?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+      - spring.datasource.username=${MYSQL_USER}
+      - spring.datasource.password=${MYSQL_PWD}
+      - spring.redis.host=${REDIS_HOST}
+      - spring.redis.port=${REDIS_PORT}
+      - spring.redis.password=${REDIS_PORT}
+    volumes:
+      - ./alron/data:/alron/data
+      - ./alron/logs:/alron/logs
+    networks:
+      - alron-net
+
+  alron-mysql:
+    image: mysql:8.2
+    container_name: alron-mysql
+    hostname: ${MYSQL_HOST}
+    privileged: true
+    restart: always
+    expose:
+      - "3306"
+    ports:
+      - "${MYSQL_PORT_OUT}:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PWD}
+      MYSQL_DATABASE: alron
+      MYSQL_PASSWORD: ${MYSQL_PWD}
+    command:
+      --lower_case_table_names=1
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/logs:/var/log/mysql
+      - ./mysql/conf.d:/etc/mysql/conf.d
+      - ./mysql/init.d:/docker-entrypoint-initdb.d
+    networks:
+      - alron-net
+
+  alron-redis:
+    image: redis:latest
+    container_name: alron-redis
+    hostname: ${REDIS_HOST}
+    restart: always
+    expose:
+      - "6379"
+    ports:
+      - "${REDIS_PORT_OUT}:6379"
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '5g'
+    volumes:
+      - ./redis/data:/data
+      # - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./redis/logs:/logs
+    # command: redis-server /usr/local/etc/redis/redis.conf
+    networks:
+      - alron-net
+
+
+networks:
+  alron-net:
+    driver: bridge
