@@ -1,6 +1,6 @@
-# 重新发布 测试环境
+# 重新发布,指定环境
 ```shell
-sh server.sh test
+sh server.sh [test,prod]
 ```
 
 # 登录aws ecr
