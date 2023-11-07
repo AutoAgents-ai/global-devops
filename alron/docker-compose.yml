@@ -67,7 +67,7 @@ services:
     volumes:
       - ./mysql/data:/var/lib/mysql
       - ./mysql/logs:/var/log/mysql
-      - ./mysql/conf.d:/etc/mysql/conf.d
+      - ./mysql/conf.d:/etc/mysql/
       - ./mysql/init.d:/docker-entrypoint-initdb.d
     networks:
       - alron-net
@@ -87,9 +87,9 @@ services:
         max-size: '5g'
     volumes:
       - ./redis/data:/data
-      # - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
-      - ./redis/logs:/logs
-    # command: redis-server /usr/local/etc/redis/redis.conf
+      - ./redis/redis.conf:/etc/redis/redis.conf 
+    command:
+      redis-server /etc/redis/redis.conf
     networks:
       - alron-net
 
