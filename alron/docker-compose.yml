@@ -11,8 +11,8 @@ services:
       - "${NGINX_PORT}:${NGINX_PORT}"
     depends_on:
       - alron-backend
-    volumes:
-      - ./nginx:/etc/nginx
+    # volumes:
+    #   - ./nginx:/etc/nginx
     networks:
       - alron-net
 
@@ -28,9 +28,11 @@ services:
     links:
       - alron-mysql
       - alron-redis
+      - alron-taskrunner
     depends_on:
       - alron-mysql
       - alron-redis
+      - alron-taskrunner
     working_dir: /alron
     environment:
       - server.port=${ALRON_PORT}
@@ -40,10 +42,25 @@ services:
       - spring.datasource.password=${MYSQL_PWD}
       - spring.redis.host=${REDIS_HOST}
       - spring.redis.port=${REDIS_PORT}
-      - spring.redis.password=${REDIS_PORT}
+      - spring.redis.password=${REDIS_PWD}
+      - taskrunner.serviceAddress=http://${TASKRUNNER_HOST}:${TASKRUNNER_PORT}/
     volumes:
       - ./alron/data:/alron/data
       - ./alron/logs:/alron/logs
+    networks:
+      - alron-net
+
+  alron-taskrunner:
+    image: 150128700443.dkr.ecr.us-east-1.amazonaws.com/autoagents:taskrunner-master
+    container_name: alron-taskrunner
+    hostname: ${TASKRUNNER_HOST}
+    restart: always
+    expose:
+      - "${TASKRUNNER_PORT}"
+    ports:
+      - "${TASKRUNNER_PORT}:${TASKRUNNER_PORT}"
+    environment:
+      API_KEY: ${RAPID_API_KEY}
     networks:
       - alron-net
 
@@ -66,7 +83,7 @@ services:
     volumes:
       - ./mysql/data:/var/lib/mysql
       - ./mysql/logs:/var/log/mysql
-      - ./mysql/conf.d:/etc/mysql/
+      # - ./mysql/conf.d:/etc/mysql
       - ./mysql/init.d:/docker-entrypoint-initdb.d
     networks:
       - alron-net
