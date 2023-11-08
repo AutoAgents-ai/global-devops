@@ -79,11 +79,11 @@ services:
       MYSQL_DATABASE: alron
       MYSQL_PASSWORD: ${MYSQL_PWD}
     command:
-      --lower_case_table_names=1
+      --lower_case_table_names=2
     volumes:
       - ./mysql/data:/var/lib/mysql
       - ./mysql/logs:/var/log/mysql
-      # - ./mysql/conf.d:/etc/mysql
+      - ./mysql/conf.d:/etc/mysql/conf.d
       - ./mysql/init.d:/docker-entrypoint-initdb.d
     networks:
       - alron-net
