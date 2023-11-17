@@ -29,13 +29,16 @@ services:
       - alron-mysql
       - alron-redis
       - alron-taskrunner
+      - alron-mongo
     depends_on:
       - alron-mysql
       - alron-redis
       - alron-taskrunner
+      - alron-mongo
     working_dir: /alron
     environment:
       - server.port=${ALRON_PORT}
+      - server.host=${SERVER_HOST}
       - spring.profiles.active=compose
       - spring.datasource.url=jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT}/alron?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
       - spring.datasource.username=${MYSQL_USER}
@@ -43,6 +46,7 @@ services:
       - spring.redis.host=${REDIS_HOST}
       - spring.redis.port=${REDIS_PORT}
       - spring.redis.password=${REDIS_PWD}
+      - storage.server=mongodb://${MONGO_USER}:${MONGO_PWD}@${MONGO_HOST}:${MONGO_PORT}/${MONGO_DB}?authSource=admin
       - taskrunner.serviceAddress=http://${TASKRUNNER_HOST}:${TASKRUNNER_PORT}/
     volumes:
       - ./alron/data:/alron/data
@@ -79,7 +83,7 @@ services:
       MYSQL_DATABASE: alron
       MYSQL_PASSWORD: ${MYSQL_PWD}
     command:
-      --lower_case_table_names=2
+      --lower_case_table_names=1
     volumes:
       - ./mysql/data:/var/lib/mysql
       - ./mysql/logs:/var/log/mysql
@@ -108,7 +112,21 @@ services:
       redis-server /etc/redis/redis.conf
     networks:
       - alron-net
-
+  alron-mongo:
+    image: mongo:5.0.18
+    container_name: alron-mongo
+    hostname: ${MONGO_HOST}
+    restart: always
+    ports: # 生产环境建议不要暴露
+      - ${MONGO_PORT}:${MONGO_PORT}
+    networks:
+      - alron-net
+    environment:
+      # 这里的配置只有首次运行生效。修改后，重启镜像是不会生效的。需要把持久化数据删除再重启，才有效果
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_USER}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PWD}
+    volumes:
+      - ./mongo/data:/data/db
 
 networks:
   alron-net:
