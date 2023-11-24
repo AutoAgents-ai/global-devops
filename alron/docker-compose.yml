@@ -39,6 +39,7 @@ services:
     environment:
       - server.port=${ALRON_PORT}
       - server.host=${SERVER_HOST}
+      - sys.env=${SYS_ENV}
       - spring.profiles.active=compose
       - spring.datasource.url=jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT}/alron?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
       - spring.datasource.username=${MYSQL_USER}
