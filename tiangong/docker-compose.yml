@@ -32,7 +32,7 @@ services:
       - "${MYSQL_PORT_OUT}:3306"
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_PWD}
-      MYSQL_DATABASE: alron
+      MYSQL_DATABASE: ${MYSQL_DB}
       MYSQL_PASSWORD: ${MYSQL_PWD}
     command:
       --lower_case_table_names=1
