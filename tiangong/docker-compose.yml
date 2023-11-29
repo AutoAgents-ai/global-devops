@@ -1,13 +1,15 @@
 version: '3'
 services:
-  pg:
+  srv-pg:
     image: ankane/pgvector:v0.5.0 # git
     # image: registry.cn-hangzhou.aliyuncs.com/fastgpt/pgvector:v0.5.0 # 阿里云
     container_name: srv-pg
     hostname: ${PG_HOST}
     restart: always
-    ports: # 生产环境建议不要暴露
-      - ${PG_PORT}:5432
+    expose:
+      - "${PG_PORT}"
+    ports:
+      - "${PG_PORT}:${PG_PORT}}"
     networks:
       - srv-net
     environment:
@@ -17,7 +19,7 @@ services:
       - POSTGRES_DB=${PG_DB}
     volumes:
       - ./pg/data:/var/lib/postgresql/data
-      
+
   srv-mysql:
     image: mysql:8.2
     container_name: srv-mysql
