@@ -1,5 +1,62 @@
 version: '3'
 services:
+
+  nginx:
+    image: 150128700443.dkr.ecr.us-east-1.amazonaws.com/autoagents:mindsynth-nginx
+    container_name: nginx
+    restart: always
+    expose:
+      - "${NGINX_PORT}"
+    ports:
+      - "${NGINX_PORT}:${NGINX_PORT}"
+    depends_on:
+      - mind
+    # volumes:
+    #   - ./nginx:/etc/nginx
+    networks:
+      - srv-net
+
+  mind:
+    image: 150128700443.dkr.ecr.us-east-1.amazonaws.com/autoagents:mindsynth-main 
+    container_name: mind
+    hostname: mind
+    restart: always
+    expose:
+      - "8088"
+    ports:
+      - "8008:8008"
+    links:
+      - srv-mysql
+      - srv-redis
+      - srv-mongo
+      - srv-pg
+    depends_on:
+      - srv-mysql
+      - srv-redis
+      - srv-mongo
+      - srv-pg
+    working_dir: /mindsynth
+    environment:
+      - server.port=8008
+      - server.host=${SERVER_HOST}
+      - sys.env=${SYS_ENV}
+      - spring.profiles.active=test
+      - spring.datasource.mysql.jdbc_url=jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT}/agents?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+      - spring.datasource.mysql.username=${MYSQL_USER}
+      - spring.datasource.mysql.password=${MYSQL_PWD}
+      - spring.datasource.postgresql.jdbcUrl=jdbc:mysql://${PG_HOST}:${PG_PORT}/${PG_DB}?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+      - spring.datasource.postgresql.username=${PG_USER}
+      - spring.datasource.postgresql.password=${PG_PWD}
+      - spring.redis.host=${REDIS_HOST}
+      - spring.redis.port=${REDIS_PORT}
+      - spring.redis.password=${REDIS_PWD}
+      - spring.data.mongo.uri=mongodb://${MONGO_USER}:${MONGO_PWD}@${MONGO_HOST}:${MONGO_PORT}/${MONGO_DB}?authSource=admin
+    volumes:
+      - ./mind/data:/mindsynth/data
+      - ./mind/logs:/mindsynth/logs
+    networks:
+      - srv-net
+
   srv-pg:
     image: ankane/pgvector:v0.5.0 # git
     # image: registry.cn-hangzhou.aliyuncs.com/fastgpt/pgvector:v0.5.0 # 阿里云
