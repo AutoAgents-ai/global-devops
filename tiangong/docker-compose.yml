@@ -7,9 +7,9 @@ services:
     hostname: ${PG_HOST}
     restart: always
     expose:
-      - "${PG_PORT}"
-    ports:
-      - "${PG_PORT}:${PG_PORT}}"
+      - "${PG_PORT}"      
+    ports: 
+      - "${PG_PORT_OUT}:${PG_PORT}"
     networks:
       - srv-net
     environment:
@@ -19,7 +19,7 @@ services:
       - POSTGRES_DB=${PG_DB}
     volumes:
       - ./pg/data:/var/lib/postgresql/data
-
+      
   srv-mysql:
     image: mysql:8.2
     container_name: srv-mysql
@@ -71,7 +71,7 @@ services:
     hostname: ${MONGO_HOST}
     restart: always
     ports: # 生产环境建议不要暴露
-      - ${MONGO_PORT}:${MONGO_PORT}
+      - ${MONGO_PORT_OUT}:${MONGO_PORT}
     networks:
       - srv-net
     environment:
