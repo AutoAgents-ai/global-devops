@@ -22,7 +22,7 @@ services:
     hostname: mind
     restart: always
     expose:
-      - "8088"
+      - "8008"
     ports:
       - "8008:8008"
     links:
