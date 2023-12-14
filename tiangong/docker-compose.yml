@@ -44,7 +44,7 @@ services:
       - spring.datasource.mysql.jdbc_url=jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT}/agents?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
       - spring.datasource.mysql.username=${MYSQL_USER}
       - spring.datasource.mysql.password=${MYSQL_PWD}
-      - spring.datasource.postgresql.jdbcUrl=jdbc:mysql://${PG_HOST}:${PG_PORT}/${PG_DB}?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+      - spring.datasource.postgresql.jdbcUrl=jdbc:postgresql://${PG_HOST}:${PG_PORT}/${PG_DB}?max=10&keepAlive=true&idleTimeoutMillis=30000&connectionTimeoutMillis=5000
       - spring.datasource.postgresql.username=${PG_USER}
       - spring.datasource.postgresql.password=${PG_PWD}
       - spring.redis.host=${REDIS_HOST}
