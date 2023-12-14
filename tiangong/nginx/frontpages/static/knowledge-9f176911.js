@@ -1,1 +1,0 @@
-import{b as t,aC as s}from"./vue-6e387ee8.js";function a(){const{appContext:e}=t();return{proxy:e.config.globalProperties}}const r=s("useKnowStore",{state:()=>({knowInfo:{},textMessage:!1,answersMessage:!1}),actions:{setChatData(e){this.knowInfo=e}},persist:{enabled:!0}});export{r as a,a as u};
