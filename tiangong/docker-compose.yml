@@ -2,7 +2,7 @@ version: '3'
 services:
 
   nginx:
-    image: 150128700443.dkr.ecr.us-east-1.amazonaws.com/autoagents:mindsynth-nginx
+    image: registry.cn-beijing.aliyuncs.com/autoagents/libs:mindsynth-nginx
     container_name: nginx
     restart: always
     expose:
@@ -17,7 +17,7 @@ services:
       - srv-net
 
   mind:
-    image: 150128700443.dkr.ecr.us-east-1.amazonaws.com/autoagents:mindsynth-main 
+    image: registry.cn-beijing.aliyuncs.com/autoagents/libs:mindsynth-main 
     container_name: mind
     hostname: mind
     restart: always
