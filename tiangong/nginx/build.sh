@@ -1,10 +1,11 @@
-IMAGE_REPOSITORY_URL=150128700443.dkr.ecr.us-east-1.amazonaws.com/autoagents
+IMAGE_REPOSITORY_HOST=registry.cn-beijing.aliyuncs.com
+IMAGE_REPOSITORY_URL=registry.cn-beijing.aliyuncs.com/autoagents/libs
 IMAGE_TAG=mindsynth-nginx
 git fetch --all
 git pull
 git add .
 git commit -m "frontend"
 git push -u origin main
-aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $IMAGE_REPOSITORY_URL
+docker login $IMAGE_REPOSITORY_HOST --username autoagents --password autoagentslibs123
 docker build  --platform linux/amd64 -t $IMAGE_REPOSITORY_URL:$IMAGE_TAG .
 docker push $IMAGE_REPOSITORY_URL:$IMAGE_TAG
