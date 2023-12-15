@@ -1,1 +1,0 @@
-import{H as t,aJ as n,l as r,m as a}from"./vue-82a6b7fc.js";import{u as c,f as p}from"./index-6dd22477.js";import"./element-155f1a92.js";import"./vxe-fc542a86.js";const d=t({__name:"index",setup(m){const{ssoToken:o,goTg:e}=c(),s=n();return(()=>{p(),o().then(()=>{s.push({path:"/"})}).catch(()=>{e()})})(),(u,_)=>(r(),a("div"))}});export{d as default};
