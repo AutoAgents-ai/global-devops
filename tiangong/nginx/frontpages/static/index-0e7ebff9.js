@@ -1,0 +1,1 @@
+import{H as s,aJ as t,l as n,m as r}from"./vue-82a6b7fc.js";import{u as a}from"./index-bedbf598.js";import"./element-4990942a.js";import"./vxe-45effba2.js";const d=s({__name:"index",setup(p){const{ssoToken:o}=a(),e=t();return(()=>{o().then(()=>{e.push({path:"/"})})})(),(m,i)=>(n(),r("div"))}});export{d as default};
