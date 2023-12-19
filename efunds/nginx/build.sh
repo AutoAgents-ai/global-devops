@@ -7,5 +7,5 @@ git add .
 git commit -m "frontend"
 git push -u origin main
 docker login $IMAGE_REPOSITORY_HOST --username autoagents --password autoagentslibs123
-docker build  --platform -t $IMAGE_REPOSITORY_URL:$IMAGE_TAG .
+docker build   -t $IMAGE_REPOSITORY_URL:$IMAGE_TAG .
 docker push $IMAGE_REPOSITORY_URL:$IMAGE_TAG
