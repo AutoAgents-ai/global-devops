@@ -1,1 +1,0 @@
-import{r}from"./index-484f24ce.js";function o(e){return r({url:`/auth/user/keys?token=${e}`,method:"post"})}function n(e){return r({url:`/chat/balance?token=${e}`,method:"get"})}export{o as l,n as r};
