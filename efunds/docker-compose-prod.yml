@@ -13,6 +13,8 @@ services:
       - mind
     # volumes:
     #   - ./nginx:/etc/nginx
+    environment:
+      - TZ=Asia/Shanghai      
     networks:
       - srv-net
 
@@ -27,6 +29,7 @@ services:
       - "8008:8008"
     working_dir: /mindsynth
     environment:
+      - TZ=Asia/Shanghai  
       - spring.profiles.active=prod
     volumes:
       - ./mind/data:/mindsynth/data
