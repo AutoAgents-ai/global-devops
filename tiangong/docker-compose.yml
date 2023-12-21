@@ -13,6 +13,8 @@ services:
       - mind
     # volumes:
     #   - ./nginx:/etc/nginx
+    environment:
+      - TZ=Asia/Shanghai      
     networks:
       - srv-net
 
@@ -37,6 +39,7 @@ services:
       - srv-pg
     working_dir: /mindsynth
     environment:
+      - TZ=Asia/Shanghai  
       - server.port=8008
       - server.host=${SERVER_HOST}
       - sys.env=${SYS_ENV}
@@ -71,6 +74,7 @@ services:
     networks:
       - srv-net
     environment:
+      - TZ=Asia/Shanghai  
       # 这里的配置只有首次运行生效。修改后，重启镜像是不会生效的。需要把持久化数据删除再重启，才有效果
       - POSTGRES_USER=${PG_USER}
       - POSTGRES_PASSWORD=${PG_PWD}
@@ -89,6 +93,7 @@ services:
     ports:
       - "${MYSQL_PORT_OUT}:3306"
     environment:
+      TZ: Asia/Shanghai  
       MYSQL_ROOT_PASSWORD: ${MYSQL_PWD}
       MYSQL_DATABASE: ${MYSQL_DB}
       MYSQL_PASSWORD: ${MYSQL_PWD}
@@ -133,6 +138,7 @@ services:
     networks:
       - srv-net
     environment:
+      - TZ=Asia/Shanghai  
       # 这里的配置只有首次运行生效。修改后，重启镜像是不会生效的。需要把持久化数据删除再重启，才有效果
       - MONGO_INITDB_ROOT_USERNAME=${MONGO_USER}
       - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PWD}
