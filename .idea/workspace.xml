@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="66513634-40f1-4a8e-9bbb-6cad25700893" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/app-loading.css" beforeDir="false" afterPath="$PROJECT_DIR$/tiangong/nginx/frontpages/app-loading.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tiangong/nginx/frontpages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/403-694d9143.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/404-1bf9805d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/AgentHeader-57bf4bdd.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/AgentHeader-59d1cca6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/AvatarDialog-28e87fea.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/AvatarDialog-84ec08a2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/ErrorPageLayout-0077493b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/ErrorPageLayout-eddfc7ec.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/Logout-85b6f16f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/Logout-af2456bc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/agent-16ba628f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/agent-6e2b993d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/agent-iocn1-569a1976.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/agent-iocn2-5afa7474.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/agent-iocn3-dd012dff.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/agent-iocn4-8e4b9260.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/create-6b8069f8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/create-afabc864.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/crosshair-1e352444.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/data-76e067f9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/data-ab66a55a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/empty-29fc80e0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/empty-d61d5e29.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/guide-card1-1c8a30c7.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/guide-card2-8bbe34b9.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/guide-card3-a70b1097.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/guide-card4-bd133c76.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/importData-5b946771.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/importData-7220219f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-03790ee5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-1fdb7681.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-43cff5c4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-5ffdc769.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-6d40f510.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-6fb1d136.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-7d77d9be.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-7da840c9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-923a6dc6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-95a0d666.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-a1dd1773.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-aea5b180.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-b352178e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-c54739a4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-d13af246.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-d94c69ac.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-dd1ea16a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-e929cb52.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index-f0a6a4ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/index.vue_vue_type_style_index_0_scoped_c7b71ed8_lang-fdfc3045.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/knowledgeTable-b4cd5651.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/knowledgeTable-b7ab7481.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/mobileLoginSucceed-7695932b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/mobileLoginSucceed-b9fdce2c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/publish-0d34c071.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/publish-3351624a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/steer-abbbb582.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/steer-e55a4fc4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/steer-f86a567a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiangong/nginx/frontpages/static/success_icon-a5c16d50.svg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Zt9D8ZCSmQkFuN9oBHughH80gk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/linguohua/Documents/code/company/global-devops&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="66513634-40f1-4a8e-9bbb-6cad25700893" name="Changes" comment="" />
+      <created>1703230385424</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703230385424</updated>
+      <workItem from="1703230386597" duration="352000" />
+      <workItem from="1703230762874" duration="42000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
