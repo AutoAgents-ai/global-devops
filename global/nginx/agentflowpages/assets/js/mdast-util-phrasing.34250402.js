@@ -1,1 +1,0 @@
-import{c as e}from"./unist-util-is.7e122464.js";const o=e(["break","delete","emphasis","footnote","footnoteReference","image","imageReference","inlineCode","link","linkReference","strong","text"]);export{o as p};
