@@ -31,6 +31,7 @@ services:
     environment:
       - TZ=Asia/Shanghai  
       - spring.profiles.active=prod
+    command: ["java","-Xms16g","-Xmx16g","-Djava.library.path=/mindsynth","-jar","mindsynth.jar"]
     volumes:
       - ./mind/data:/mindsynth/data
       - ./mind/logs:/mindsynth/logs

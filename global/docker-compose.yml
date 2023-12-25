@@ -49,6 +49,7 @@ services:
       - spring.redis.password=${REDIS_PWD}
       - storage.server=mongodb://${MONGO_USER}:${MONGO_PWD}@${MONGO_HOST}:${MONGO_PORT}/${MONGO_DB}?authSource=admin
       - taskrunner.serviceAddress=http://${TASKRUNNER_HOST}:${TASKRUNNER_PORT}/
+    command: ["java","-Xms2g","-Xmx2g","-Djava.library.path=/mindsynth","-jar","mindsynth.jar"]
     volumes:
       - ./alron/data:/alron/data
       - ./alron/logs:/alron/logs

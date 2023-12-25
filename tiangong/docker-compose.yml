@@ -55,6 +55,7 @@ services:
       - spring.redis.password=${REDIS_PWD}
       - spring.data.mongodb.uri=mongodb://${MONGO_USER}:${MONGO_PWD}@${MONGO_HOST}:${MONGO_PORT}/${MONGO_DB}?authSource=admin
       - storage.browser=${SERVER_HOST}${STORAGE_BROWSER}
+    command: ["java","-Xms2g","-Xmx2g","-Djava.library.path=/mindsynth","-jar","mindsynth.jar"]      
     volumes:
       - ./mind/data:/mindsynth/data
       - ./mind/logs:/mindsynth/logs
