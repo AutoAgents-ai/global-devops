@@ -1,0 +1,42 @@
+version: '3'
+services:
+
+  nginx:
+    image: registry.cn-beijing.aliyuncs.com/autoagents/libs:mindsynth-nginx
+    container_name: nginx
+    restart: always
+    expose:
+      - "80"
+    ports:
+      - "80:80"
+    depends_on:
+      - mind
+    # volumes:
+    #   - ./nginx:/etc/nginx
+    environment:
+      - TZ=Asia/Shanghai      
+    networks:
+      - srv-net
+
+  mind:
+    image: registry.cn-beijing.aliyuncs.com/autoagents/libs:mindsynth-main 
+    container_name: mind
+    hostname: mind
+    restart: always
+    expose:
+      - "8008"
+    ports:
+      - "8008:8008"
+    working_dir: /mindsynth
+    environment:
+      - TZ=Asia/Shanghai  
+      - spring.profiles.active=prod
+    command: ["java","-Xms16g","-Xmx32g","-Djava.library.path=/mindsynth","-jar","mindsynth.jar"]      
+    volumes:
+      - ./mind/data:/mindsynth/data
+      - ./mind/logs:/mindsynth/logs
+    networks:
+      - srv-net
+networks:
+  srv-net:
+    driver: bridge
