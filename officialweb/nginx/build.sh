@@ -1,6 +1,6 @@
 IMAGE_REPOSITORY_HOST=autoagents-registry.cn-beijing.cr.aliyuncs.com
 IMAGE_REPOSITORY_URL=autoagents-registry.cn-beijing.cr.aliyuncs.com/agent/mind
-IMAGE_TAG=mindsynth-nginx
+IMAGE_TAG=offical-nginx
 git fetch --all
 git pull
 git add .
