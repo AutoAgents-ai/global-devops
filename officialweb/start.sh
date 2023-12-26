@@ -4,7 +4,6 @@ IMAGE_REPOSITORY_URL=autoagents-registry.cn-beijing.cr.aliyuncs.com/agent/mind
 
 sudo cd $current_dir
 sudo docker login $IMAGE_REPOSITORY_HOST --username autoagents --password autoagents2023
-sudo docker pull $IMAGE_REPOSITORY_URL:nginx-sass
-sudo docker pull $IMAGE_REPOSITORY_URL:mindsynth-sass
+sudo docker pull $IMAGE_REPOSITORY_URL:offical-nginx
 sudo docker compose  rm -f -s
 sudo docker compose  up -d

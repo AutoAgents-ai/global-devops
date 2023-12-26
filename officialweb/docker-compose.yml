@@ -1,0 +1,20 @@
+version: '3'
+services:
+
+  nginx:
+    image: autoagents-registry.cn-beijing.cr.aliyuncs.com/agent/mind:offical-nginx
+    container_name: nginx
+    restart: always
+    expose:
+      - "80"
+    ports:
+      - "80:80"
+    # volumes:
+    #   - ./nginx:/etc/nginx
+    environment:
+      - TZ=Asia/Shanghai      
+    networks:
+      - srv-net
+networks:
+  srv-net:
+    driver: bridge
