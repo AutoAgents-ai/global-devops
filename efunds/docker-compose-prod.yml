@@ -2,7 +2,7 @@ version: '3'
 services:
 
   nginx:
-    image: registry.cn-beijing.aliyuncs.com/autoagents/libs:mindsynth-nginx-efunds
+    image: autoagents-registry.cn-beijing.cr.aliyuncs.com/agent/mind:mindsynth-nginx-efunds
     container_name: nginx
     restart: always
     expose:
@@ -19,7 +19,7 @@ services:
       - srv-net
 
   mind:
-    image: registry.cn-beijing.aliyuncs.com/autoagents/libs:mindsynth-main-efunds
+    image: autoagents-registry.cn-beijing.cr.aliyuncs.com/agent/mind:mindsynth-main-efunds
     container_name: mind
     hostname: mind
     restart: always
