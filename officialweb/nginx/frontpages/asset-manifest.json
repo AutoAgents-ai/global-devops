@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.a08f6fee.css",
-    "main.js": "/static/js/main.5888a6e2.js",
+    "main.css": "/static/css/main.d8d8d708.css",
+    "main.js": "/static/js/main.43bcdf5e.js",
     "static/js/787.7cae2aec.chunk.js": "/static/js/787.7cae2aec.chunk.js",
     "static/media/20230904-191435.mp4": "/static/media/20230904-191435.1a5425a848c372c97d17.mp4",
     "static/media/joini.jpg": "/static/media/joini.c7b0e92bb95951f0c6f0.jpg",
+    "static/media/官网招聘.svg": "/static/media/官网招聘.5ffdb19dad29488b5a46b88dee9937da.svg",
     "static/media/产品2.png": "/static/media/产品2.420d0a6ead738feafd1b.png",
     "static/media/产品更换.png": "/static/media/产品更换.420d0a6ead738feafd1b.png",
     "static/media/8.png": "/static/media/8.0ad538a03295c8f54625.png",
@@ -28,12 +29,12 @@
     "static/media/视频图.webp": "/static/media/视频图.1ae0221bd6a776c985fa.webp",
     "static/media/产品1.webp": "/static/media/产品1.1404e0aa9818436bec54.webp",
     "index.html": "/index.html",
-    "main.a08f6fee.css.map": "/static/css/main.a08f6fee.css.map",
-    "main.5888a6e2.js.map": "/static/js/main.5888a6e2.js.map",
+    "main.d8d8d708.css.map": "/static/css/main.d8d8d708.css.map",
+    "main.43bcdf5e.js.map": "/static/js/main.43bcdf5e.js.map",
     "787.7cae2aec.chunk.js.map": "/static/js/787.7cae2aec.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a08f6fee.css",
-    "static/js/main.5888a6e2.js"
+    "static/css/main.d8d8d708.css",
+    "static/js/main.43bcdf5e.js"
   ]
 }
