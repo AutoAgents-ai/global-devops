@@ -9,8 +9,6 @@ services:
       - "80"
     ports:
       - "80:80"
-    depends_on:
-      - mind
     # volumes:
     #   - ./nginx:/etc/nginx
     environment:
