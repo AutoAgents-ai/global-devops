@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a08f6fee.css",
+    "main.js": "/static/js/main.5888a6e2.js",
+    "static/js/787.7cae2aec.chunk.js": "/static/js/787.7cae2aec.chunk.js",
+    "static/media/20230904-191435.mp4": "/static/media/20230904-191435.1a5425a848c372c97d17.mp4",
+    "static/media/joini.jpg": "/static/media/joini.c7b0e92bb95951f0c6f0.jpg",
+    "static/media/产品2.png": "/static/media/产品2.420d0a6ead738feafd1b.png",
+    "static/media/产品更换.png": "/static/media/产品更换.420d0a6ead738feafd1b.png",
+    "static/media/8.png": "/static/media/8.0ad538a03295c8f54625.png",
+    "static/media/7.png": "/static/media/7.8f121da018fa0eb7be2c.png",
+    "static/media/5.png": "/static/media/5.710d2acd4232df65f6f1.png",
+    "static/media/2.webp": "/static/media/2.eaf173c17d50a8061626.webp",
+    "static/media/10.png": "/static/media/10.2a2c677c99bb7256cea6.png",
+    "static/media/1.webp": "/static/media/1.0148b0f78dbaca022bd9.webp",
+    "static/media/4.webp": "/static/media/4.3a30e4be601a762b1964.webp",
+    "static/media/二维码_2.jpg": "/static/media/二维码_2.23c28bd2996af6d5543c.jpg",
+    "static/media/9.png": "/static/media/9.1d7b55b271f9b137d286.png",
+    "static/media/3.png": "/static/media/3.d05c68a1fc2dff0a65de.png",
+    "static/media/产品2.webp": "/static/media/产品2.7eb612a62043b11756ca.webp",
+    "static/media/6.png": "/static/media/6.3364c980055d952138a5.png",
+    "static/media/4.png": "/static/media/4.418c41fcf4b834c29a25.png",
+    "static/media/1.png": "/static/media/1.bbb0f285430822b00779.png",
+    "static/media/2.png": "/static/media/2.bde1bd3ca20a74ff51b7.png",
+    "static/media/3.webp": "/static/media/3.fbba52136c5ad688dc91.webp",
+    "static/media/产品3.webp": "/static/media/产品3.80a9e3235b1f072997d4.webp",
+    "static/media/我的产品.webp": "/static/media/我的产品.8f3cda1ffb40be795456.webp",
+    "static/media/视频图.webp": "/static/media/视频图.1ae0221bd6a776c985fa.webp",
+    "static/media/产品1.webp": "/static/media/产品1.1404e0aa9818436bec54.webp",
+    "index.html": "/index.html",
+    "main.a08f6fee.css.map": "/static/css/main.a08f6fee.css.map",
+    "main.5888a6e2.js.map": "/static/js/main.5888a6e2.js.map",
+    "787.7cae2aec.chunk.js.map": "/static/js/787.7cae2aec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a08f6fee.css",
+    "static/js/main.5888a6e2.js"
+  ]
+}
