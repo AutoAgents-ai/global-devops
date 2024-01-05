@@ -1,1 +1,0 @@
-import{z as t}from"./index-1e054e18.js";function o(e){return t({url:`/auth/user/keys?token=${e}`,method:"post"})}function n(e){return t({url:`/chat/balance?token=${e}`,method:"get"})}function u(){return t({url:"/auth/user/getSsoToken",method:"get"})}export{u as g,o as l,n as r};
