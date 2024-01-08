@@ -1,1 +1,0 @@
-import{j as a}from"./element-e5236e8d.js";const s=e=>e?a(new Date(e)).format("YYYY-MM-DD HH:mm:ss"):"N/A",m=e=>{let t="";try{t=getComputedStyle(document.documentElement).getPropertyValue(e)}catch(r){console.error(r)}return t};export{s as f,m as g};
